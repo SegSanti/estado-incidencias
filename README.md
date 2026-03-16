@@ -67,4 +67,6 @@ The goal of this system is to improve the operational awareness of the IT suppor
 
 This solution acts as a lightweight monitoring mechanism in the absence of native notification capabilities in the Matrix42 platform.
 
-## Repository content
+## System Architecture
+
+![System Architecture](docs/architecture.svg)
