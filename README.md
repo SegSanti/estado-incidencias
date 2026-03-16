@@ -2,6 +2,10 @@
 
 Internal monitoring tool developed by **Segula IT Spain – Development Division** to improve the operational visibility of incoming IT incidents reported through the Matrix42 helpdesk system.
 
+## System Architecture
+
+![System Architecture](architecture.svg)
+
 ## Background
 
 The Matrix42 portal used internally for incident management currently does not provide:
@@ -66,7 +70,3 @@ A simple relay-based hardware device connected to a workstation is used to gener
 The goal of this system is to improve the operational awareness of the IT support team by providing an immediate visual notification when new incidents are received.
 
 This solution acts as a lightweight monitoring mechanism in the absence of native notification capabilities in the Matrix42 platform.
-
-## System Architecture
-
-![System Architecture](docs/architecture.svg)
