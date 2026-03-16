@@ -1,0 +1,27 @@
+function generarEstadoJSON() {
+
+  let label = GmailApp.getUserLabelByName("Incidencia IT");
+
+  if (!label) {
+    label = GmailApp.createLabel("Incidencia IT");
+  }
+
+  let threads = GmailApp.search('from:IT-Servicedesk@segulagrp.com -label:"Incidencia IT" newer_than:1d');
+
+  if (threads.length > 0) {
+    UrlFetchApp.fetch("https://webhook.site/WEBHOOK_TOKEN");
+  }
+
+  let estado = {
+    incidencia: threads.length > 0,
+    total: threads.length,
+    fecha: new Date().toISOString()
+  };
+
+  Logger.log("Incidencias nuevas: " + threads.length);
+
+  threads.forEach(thread => {
+    thread.addLabel(label);
+  });
+
+}
